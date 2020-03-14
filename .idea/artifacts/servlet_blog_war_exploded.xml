@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="servlet-blog:war exploded">
-    <output-path>$PROJECT_DIR$/servlet-blog/target/servlet-blog</output-path>
+    <output-path>$PROJECT_DIR$/servlet-blog/target/blogdemo</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
@@ -19,7 +19,7 @@
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/servlet-blog/target/servlet-blog/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/servlet-blog/target/blogdemo/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="servlet-blog/web/Web" />
     </root>

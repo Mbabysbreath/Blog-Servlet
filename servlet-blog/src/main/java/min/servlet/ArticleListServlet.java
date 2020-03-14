@@ -1,5 +1,7 @@
 package min.servlet;
 
+import min.dao.ArticleDAO;
+import min.model.Article;
 import min.model.Result;
 import min.util.JSONUtil;
 
@@ -12,6 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author zhaomin
@@ -24,7 +27,9 @@ public class ArticleListServlet extends BaseServlet {
         //解析请求数据id=1
         Integer id=Integer.parseInt(req.getParameter("id"));
         //数据库查询id=1的用户，该用户发表的所有文章数据返回给客户端
+        List<Article> articles= ArticleDAO.queryByUserId(id);
+        System.out.println(articles);
         //TODO
-        return null;
+        return articles;
     }
 }

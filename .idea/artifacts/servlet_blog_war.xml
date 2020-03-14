@@ -1,7 +1,7 @@
 <component name="ArtifactManager">
   <artifact type="war" name="servlet-blog:war">
     <output-path>$PROJECT_DIR$/servlet-blog/target</output-path>
-    <root id="archive" name="servlet-blog.war">
+    <root id="archive" name="blogdemo.war">
       <element id="artifact" artifact-name="servlet-blog:war exploded" />
     </root>
   </artifact>

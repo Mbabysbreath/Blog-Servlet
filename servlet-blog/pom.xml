@@ -48,7 +48,7 @@
     </dependencies>
     <build>
         <!-- 最后使用mvn package命令打包的文件名称 -->
-        <finalName>${project.artifactId}</finalName>
+        <finalName>blogdemo</finalName>
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
