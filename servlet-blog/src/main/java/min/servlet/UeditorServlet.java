@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.net.URLDecoder;
 
 /**
  * @author zhaomin
@@ -24,7 +25,9 @@ public class UeditorServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String rootPath = getClass().getClassLoader().getResource("config.json").getPath();
-        MyActionEnter actionEnter = new MyActionEnter(req, rootPath);
+        String path= URLDecoder.decode(rootPath,"UTF-8");//反编译
+        System.out.println(path);
+        MyActionEnter actionEnter = new MyActionEnter(req, path);
         String exe = actionEnter.exec();
         PrintWriter pw = resp.getWriter();
         pw.println(exe);
